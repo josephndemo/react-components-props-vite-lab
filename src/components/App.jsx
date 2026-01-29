@@ -1,13 +1,35 @@
 import React from "react";
-import blogData from "../data/blog";
+import Header from "./Header";
+import About from "./About";
+import ArticleList from "./ArticleList";
 
-console.log(blogData);
+// Example posts data
+const posts = [
+  {
+    id: 1,
+    title: "About me",
+    date: "Jan 2026",
+    preview: "Software developer",
+  },
+  {
+    id: 2,
+    title: "Career",
+    date: "Jan 2026",
+    preview: "Systems Engineer at Google",
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
+      <Header name="Joseph Blog" />
+
+      <About
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS60y-B-qoPCqpgARehINBImhuLDMaSpheV7A&s"
+        about="My personal blog"
+      />
+
+      <ArticleList posts={posts} />
     </div>
   );
 }
